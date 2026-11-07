@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NetLinks – Thank You</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="sparkles"></canvas>
+<button id="musicBtn" class="music" aria-label="Toggle music">♪ Music</button>
+
+<!-- SCREEN 1: LOGO REVEAL -->
+<section id="s1" class="screen active intro">
+  <img src="images/logo.jpg" alt="NetLinks logo" class="logo">
+  <h2 class="brand">NetLinks</h2>
+  <h1 id="typed" class="typed"></h1>
+  <button class="btn" id="beginBtn">Begin the Experience</button>
+</section>
+
+<!-- SCREEN 2: FLOWER -->
+<section id="s2" class="screen flower-screen">
+  <svg id="flower" viewBox="-150 -150 300 300" aria-hidden="true"></svg>
+  <h2 class="title">Because of You, She Blooms</h2>
+  <p class="lead">Every girl carries a garden inside her. Your kindness became the sunlight, the water, and the patient care that let it grow. Thank you for believing that a girl with a book in her hands can change the world.</p>
+  <button class="btn" data-go="s3">Discover Our Story</button>
+</section>
+
+<!-- SCREEN 3: STORY + GALLERY -->
+<section id="s3" class="screen story">
+  <p class="eyebrow">Our Story</p>
+  <h2 class="title">A Place Where We Learned to Dream</h2>
+  <p class="lead">NetLinks was never a place we built ourselves. It was a place that welcomed us, where we came to study, to grow and to believe in our future. Every classroom, every lesson and every kind word is a memory we carry in our hearts.</p>
+  <div class="gallery" id="gallery"></div>
+  <p class="hint">Tap or hover a card to see the story behind it</p>
+  <button class="btn" data-go="s4">Our Thanks to Everyone</button>
+</section>
+
+<!-- SCREEN 4: THANK YOU FROM THE STUDENTS -->
+<section id="s4" class="screen teams">
+  <p class="eyebrow">From Our Hearts</p>
+  <h2 class="title">Thank You, From Us</h2>
+  <p class="lead">These words come from the students who studied here, whose lives were changed by you.</p>
+  <div class="notes" id="teamGrid"></div>
+  <button class="btn" data-go="s5">Open Your Letter</button>
+</section>
+
+<!-- SCREEN 5: ENVELOPE -->
+<section id="s5" class="screen envelope-screen">
+  <p class="eyebrow">A Secret Just for You</p>
+  <h2 class="title">A Letter Is Waiting</h2>
+  <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open the envelope">
+    <div class="env-back"></div>
+    <div class="paper"></div>
+    <div class="env-front"></div>
+    <div class="flap"></div>
+    <div class="seal">N</div>
+  </div>
+  <p class="hint" id="envHint">Tap the purple seal to open</p>
+</section>
+
+<!-- LETTER OVERLAY -->
+<div id="letterOverlay" class="letter-overlay">
+  <article class="letter">
+    <h2>Dear NetLinks,</h2>
+    <p>Dear every team, teacher, mentor, volunteer, intern and friend who made this place possible,</p>
+    <p>There are moments when the heart is so full that words feel too small. This is one of those moments.</p>
+    <p>NetLinks was not a place we built ourselves. It was a gift. When so many doors were closed to us, you opened one, and behind it we found light, a seat to learn in, and a reason to believe in tomorrow.</p>
+    <p>Every lesson you taught, every patient answer, every late hour and every gentle smile still lives inside us. You did not only teach us to read and to learn. You taught us that we matter, and that our dreams are worth fighting for.</p>
+    <p>To UNICEF and to every supporter who stood beside us when it mattered most: because of you, we are not just students. We are daughters with hope, sisters with courage, and women who will one day lift others the way you lifted us.</p>
+    <p>We promise to carry what you gave us wherever we go, and to pass the light on. You will live in our hearts forever.</p>
+    <p class="sign">With our love and endless thanks,<br><strong>Arya Azizi</strong></p>
+    <div class="letter-btns">
+      <button class="btn small" id="closeLetter">Close Letter</button>
+      <button class="btn small ghost" id="replayBtn">Replay Experience</button>
+    </div>
+  </article>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
